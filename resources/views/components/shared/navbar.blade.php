@@ -14,12 +14,19 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Tutti gli annunci</a>
         </li>
+        @auth
         <li class="nav-item">
-          <a class="nav-link" href="#">Crea annuncio +</a>
+          <a class="nav-link" href="{{route('create.article')}}">Crea annuncio +</a>
         </li>
+        @endauth
+
+        @guest
         <li class="nav-item">
-          <a class="nav-link" href="#">Login</a>
+          <a class="nav-link" href="{{route('login')}}">Login</a>
         </li>
+        @endguest
+
+        @auth
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Profilo</a>
           <div class="dropdown-menu">
@@ -27,7 +34,11 @@
             <!-- <a class="dropdown-item" href="#">Another action</a>
             <a class="dropdown-item" href="#">Something else here</a> -->
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Logout</a>
+            <form class="nav-link d-flex justify-content-center align-items-center" action="{{route('logout')}}" method="POST">
+            @csrf
+            <button type="submit" class="btn p-0 m-0 text-danger">Logout</button>
+          </form>
+          @endauth
           </div>
         </li>
       </ul>
