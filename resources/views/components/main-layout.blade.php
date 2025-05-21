@@ -12,7 +12,10 @@
 <body>
     <x-shared.navbar />
     
-         {{$slot}}
+        {{$slot}}
+    
+    
+         
     
    
     <x-shared.footer />
