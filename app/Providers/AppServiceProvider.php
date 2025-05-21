@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
-use Laravel\Fortify\Fortify;
+use App\Models\Category;
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -20,11 +22,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-           Fortify::loginView(function () {
-        return view('auth.login');
-    });
-       Fortify::registerView(function () {
-        return view('auth.register');
-    });
+        if(Schema::hasTable('categories')){
+            View::share('categories',Category::orderBy('name')->get());
+        }
     }
 }
