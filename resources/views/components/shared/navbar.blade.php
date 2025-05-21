@@ -12,7 +12,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Tutti gli annunci</a>
+          <a class="nav-link" href="{{route('article.index')}}">Tutti gli annunci</a>
         </li>
         @auth
         <li class="nav-item">

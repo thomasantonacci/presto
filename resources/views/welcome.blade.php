@@ -3,7 +3,7 @@
     <x-shared.section-title title="Benvenuto su Presto" subtitle="Il sito dove puoi vendere e comprare tutto quello che immagini!" />
 
     <div class="container-fluid">
-        <div class="row height-custom justify-content-center align-items-center py-5">
+        <!-- <div class="row height-custom justify-content-center align-items-center py-5">
         @forelse ($articles as $article)
         <div class="col-12 col-md-3 ">
             <x-shared.card :article="$article" />
@@ -15,7 +15,7 @@
             </h3>
         </div>
         @endforelse
-    </div>
+    </div> -->
     </div>
 
     
