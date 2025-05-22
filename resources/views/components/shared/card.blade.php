@@ -1,4 +1,4 @@
-<div class="card mx-auto card-w myheight rounded shadow border-3 text-center mb-3">
+<div class="card mx-auto card-w  rounded shadow border-3 text-center mb-3">
     <img src="https://picsum.photos/200" class="card-img-top" alt="Immagine dell'articolo {{$article->title}}">
     <div class="card-body">
         <div class="altezzatitolo">
@@ -8,7 +8,8 @@
         
         <div class="d-flex justify-content-evenly align-items-center mt-5">
             <a href="{{route('article.show', compact('article'))}}" class="btn rounded btn-primary">Dettaglio</a>
-            <a href="" class="btn rounded btn-outline-info">Categoria</a>
+            <a href="{{ route('byCategory', ['category' => $article->category]) }}"
+class="btn rounded btn-outline-info">{{ $article->category->name }}</a>
         </div>
     </div>
 </div>
