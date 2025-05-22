@@ -12,9 +12,9 @@
 <body>
     <x-shared.navbar />
     
-    <div class="py-5">
+   
          {{$slot}}
-    </div>
+    
        
     
     
