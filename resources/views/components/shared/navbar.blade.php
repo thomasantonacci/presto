@@ -1,26 +1,26 @@
 <nav class="navbar sticky-top navbar-expand-lg bg-primary" data-bs-theme="dark">
   <div class="container">
-    <a class="navbar-brand" href="{{route('home')}}">Presto</a>
+    <a class="navbar-brand myfont" href="{{route('home')}}">Presto</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav ms-auto ">
         <li class="nav-item">
-          <a class="nav-link active" href="{{route('home')}}">Home
+          <a class="nav-link active" href="{{route('home')}}"><i class="fa-solid p-1  fa-house"></i>Home
             <span class="visually-hidden">(current)</span>
           </a>
 
 
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{route('article.index')}}">Tutti gli annunci</a>
+          <a class="nav-link" href="{{route('article.index')}}"><i class="fa-solid p-1 fa-newspaper"></i>Tutti gli annunci</a>
         </li>
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
             aria-expanded="false">
-            Categorie</a>
+           <i class="fa-solid p-1 fa-list-ul"></i> Categorie</a>
           <ul class="dropdown-menu">
             @foreach ($categories as $category)
             <li><a class="dropdown-item text-light"
@@ -36,10 +36,10 @@
         </li>
         @auth
         <li class="nav-item">
-          <a class="nav-link" href="{{route('create.article')}}">Crea annuncio +</a>
+          <a class="nav-link" href="{{route('create.article')}}"><i class="fa-solid p-1 fa-file-circle-plus"></i>Crea annuncio </a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Profilo</a>
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa-solid p-1 fa-user"></i>Profilo</a>
           <div class="dropdown-menu">
             <a class="dropdown-item text-light" href="#">Profilo utente</a>
             <!-- <a class="dropdown-item" href="#">Another action</a>
@@ -47,7 +47,7 @@
             <div class="dropdown-divider"></div>
             <form class="nav-link d-flex justify-content-center align-items-center" action="{{route('logout')}}" method="POST">
               @csrf
-              <button type="submit" class="btn p-0 m-0 text-danger">Logout</button>
+              <button type="submit" class="btn p-0 m-0 text-danger"> <i class="fa-solid p-1 text-danger fa-right-from-bracket"></i>Logout</button>
             </form>
 
             @endauth

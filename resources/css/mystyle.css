@@ -6,4 +6,36 @@
     height: 100px;
 }
 
+.hero-container {
+    height: 60vh;
+    /* width: 100%; */
+    background-image:linear-gradient(rgba(255,255,255,0.1), rgba(50,50,50,0.8)),  url("https://images.pexels.com/photos/7289746/pexels-photo-7289746.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1://images.pexels.com/photos/7289723/pexels-photo-7289723.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1://static.ebayinc.com/static/assets/Uploads/PressRoom/Local/_resampled/FillWzgwMCw1MzRd/EBAY-SP-199SET2116.jpg?fs=16058d0528f6e349");
+    background-position:center;
+    background-size:cover;
+    background-repeat: no-repeat;
+
+}
+
+.myfont{
+    font-family: "Playwrite DK Loopet", cursive;
+    font-size: 25px;
+}
+
+.myfont2{
+    font-family: "Playwrite DK Loopet", cursive;
+    
+    
+
+}
+
+.velina {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.573);
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+
 

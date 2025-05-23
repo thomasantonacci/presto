@@ -37,7 +37,7 @@
             @enderror
         </div>
         <div class="d-flex justify-content-center">
-            <button type="submit" class="btn rounded btn-dark">Crea</button>
+            <button type="submit" class="btn rounded btn-dark"><i class="fa-solid p-1 fa-upload"></i>Crea annuncio</button>
         </div>
     
     
