@@ -43,7 +43,7 @@
           <div class="dropdown-menu">
             <a class="dropdown-item text-light" href="#">Profilo utente</a>
             @if (Auth::user()->is_revisor)
-            <a class="dropdown-item text-light" href="{{route('revisor.index')}}">Zona Revisore</a>
+            <a class="position-relative btn-sm dropdown-item text-light" href="{{route('revisor.index')}}">Zona Revisore<span class="position-absolute top-0 ms-2 mt-1 traslate-middle badge rounded-pill bg-danger">{{\App\Models\Article::toBeRevisedCount()}}</span></a>
             @endif
             <!-- <a class="dropdown-item" href="#">Another action</a>
             <a class="dropdown-item" href="#">Something else here</a> -->
