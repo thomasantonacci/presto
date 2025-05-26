@@ -42,6 +42,9 @@
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa-solid p-1 fa-user"></i>Profilo</a>
           <div class="dropdown-menu">
             <a class="dropdown-item text-light" href="#">Profilo utente</a>
+            @if (Auth::user()->is_revisor)
+            <a class="dropdown-item text-light" href="{{route('revisor.index')}}">Zona Revisore</a>
+            @endif
             <!-- <a class="dropdown-item" href="#">Another action</a>
             <a class="dropdown-item" href="#">Something else here</a> -->
             <div class="dropdown-divider"></div>
@@ -54,7 +57,7 @@
 
             @guest
         <li class="nav-item">
-          <a class="nav-link" href="{{route('login')}}">Login</a>
+          <a class="nav-link" href="{{route('login')}}"><i class="fa-solid fa-right-to-bracket p-1"></i>Login</a>
         </li>
         @endguest
 

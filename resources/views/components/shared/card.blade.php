@@ -1,4 +1,4 @@
-<div class="card mx-auto card-w  rounded shadow border-3 text-center mb-3">
+<div class="card mx-auto p-2 card-w rounded shadow border-3 text-center mb-3">
     <img src="https://picsum.photos/200" class="card-img-top" alt="Immagine dell'articolo {{$article->title}}">
     <div class="card-body">
         <div class="altezzatitolo">
@@ -6,8 +6,8 @@
         <h6 class="card-subtitle mt-4 text-body-secondary">{{ $article->price }} €</h6>
         </div>
         
-        <div class="d-flex justify-content-evenly align-items-center mt-5">
-            <a href="{{route('article.show', compact('article'))}}" class="btn rounded btn-primary"><i class="fa-solid p-1 fa-circle-info"></i></i>Dettaglio</a>
+        <div class="d-flex flex-column justify-content-evenly align-items-center mt-5">
+            <a href="{{route('article.show', compact('article'))}}" class="btn mb-2 rounded btn-primary"><i class="fa-solid p-1 fa-circle-info"></i></i>Dettaglio</a>
             <a href="{{ route('byCategory', ['category' => $article->category]) }}"
 class="btn rounded btn-outline-info"><i class="fa-solid p-1 fa-list-ul"></i>{{ $article->category->name }}</a>
         </div>
