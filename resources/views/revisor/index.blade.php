@@ -36,8 +36,8 @@
                 <p class="h6">{{ $article_to_check->description }}</p>
             </div>
             <div class="d-flex pb-4 justify-content-around">
-                    <button id="btn-apri" class="btn btn-danger py-2 px-5 fw-bold rounded shadow">Rifiuta</button>
-                    <button id="btn-apri-2" class="btn btn-success py-2 px-5 fw-bold rounded shadow">Accetta</button>
+                <button type="button" class="btn btn-danger py-2 px-5 fw-bold rounded shadow" data-bs-toggle="modal" data-bs-target="#exampleModal">Rifiuta</button>
+                <button type="button" class="btn btn-success py-2 px-5 fw-bold rounded shadow" data-bs-toggle="modal" data-bs-target="#exampleModal">Accetta</button>
             </div>
         </div>
     </div>
@@ -53,17 +53,15 @@
     @endif
     </div>
     <!-- MODALE -->
-    <div id="my-modal" class="modal">
-        <div class="modal-dialog" role="document">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title text-danger">Avviso di conferma</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"></span>
-                    </button>
+                    <h1 class="modal-title fs-5 text-danger fw-bold" id="exampleModalLabel">Avviso di conferma</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Sei sicuro di vole procedere?</p>
+                    <p>Sei sicuro di voler procedere?</p>
                 </div>
                 <div class="modal-footer">
                     <form action="{{route('accept', ['article'=>$article_to_check])}}" method="POST">
