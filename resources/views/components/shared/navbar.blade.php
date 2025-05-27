@@ -10,8 +10,6 @@
           <a class="nav-link active" href="{{route('home')}}"><i class="fa-solid p-1  fa-house"></i>Home
             <span class="visually-hidden">(current)</span>
           </a>
-
-
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{route('article.index')}}"><i class="fa-solid p-1 fa-newspaper"></i>Tutti gli annunci</a>
@@ -20,20 +18,19 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
             aria-expanded="false">
-           <i class="fa-solid p-1 fa-list-ul"></i> Categorie</a>
+            <i class="fa-solid p-1 fa-list-ul"></i> Categorie</a>
           <ul class="dropdown-menu">
             @foreach ($categories as $category)
             <li><a class="dropdown-item text-light"
                 href="{{route('byCategory',['category' => $category])}}">{{ $category->name }}</a>
-
               @if (!$loop->last)
               <hr class="dropdown-divider">
               @endif
               @endforeach
+            </li>
           </ul>
         </li>
 
-        </li>
         @auth
         <li class="nav-item">
           <a class="nav-link" href="{{route('create.article')}}"><i class="fa-solid p-1 fa-file-circle-plus"></i>Crea annuncio </a>
@@ -60,14 +57,19 @@
           <a class="nav-link" href="{{route('login')}}"><i class="fa-solid fa-right-to-bracket p-1"></i>Login</a>
         </li>
         @endguest
-
-
-
     </div>
     </li>
-
     </ul>
 
+    <form class="d-flex ms-auto" role="search" action="{{route('article.search')}}" method="GET">
+      <div class="input-group">
+        <input type="search" name="query" class="form-control rounded" placeholder="Cerca" aria-label="search">
+        <button type="submit" class="input-group-text btn btn-outline-light rounded shadow ms-2"
+          id="basic-addon2">
+          Cerca
+        </button>
+      </div>
+    </form>
   </div>
   </div>
 </nav>
