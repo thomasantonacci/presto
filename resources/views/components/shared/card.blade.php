@@ -8,8 +8,7 @@
         
         <div class="d-flex flex-column justify-content-evenly align-items-center mt-5">
             <a href="{{route('article.show', compact('article'))}}" class="btn mb-2 rounded btn-primary"><i class="fa-solid p-1 fa-circle-info"></i></i>Dettaglio</a>
-            <a href="{{ route('byCategory', ['category' => $article->category]) }}"
-class="btn rounded btn-outline-info"><i class="fa-solid p-1 fa-list-ul"></i>{{ $article->category->name }}</a>
+            <a href="{{ route('byCategory', ['category' => $article->category]) }}"class="btn rounded btn-outline-info"><i class="fa-solid p-1 fa-list-ul"></i>{{ $article->category->name }}</a>
         </div>
     </div>
 </div>
