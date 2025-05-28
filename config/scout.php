@@ -16,11 +16,7 @@ return [
     |
     */
 
-<<<<<<< HEAD
-    'driver' => env('SCOUT_DRIVER', 'algolia'),
-=======
     'driver' => env('SCOUT_DRIVER', 'tntsearch'), 
->>>>>>> c1fb441f1c5a71b70f8d89482ddb5a54650929cc
 
     /*
     |--------------------------------------------------------------------------
@@ -210,8 +206,6 @@ return [
         ],
     ],
 
-<<<<<<< HEAD
-=======
 'tntsearch' =>[   
         'storage' => storage_path(),
         'fuzziness' => env('TNTSEARCH_FUZZINESS', true),
@@ -226,5 +220,4 @@ return [
         'maxDocs' => env('TNTSEARCH_MAX_DOCS', 500),
 ],
 
->>>>>>> c1fb441f1c5a71b70f8d89482ddb5a54650929cc
 ];
