@@ -12,7 +12,7 @@ return [
     'profiloUtente' => 'Perfil de usuario',
     'search' => 'Buscar',
     'revisore' => 'Area de Revisor',
-    'titolo' => 'Bienvenido a',
+    'titoloWelcome' => 'Bienvenido a',
     'sottotitolo' => '¡El sitio donde puedes vender y comprar todo lo que imaginas!',
     'noArticoli' => 'Aún no se han creado artículos',
     'ultimi' => 'Los últimos artículos',
@@ -26,4 +26,21 @@ return [
     'motori' => 'Motores',
     'salute e bellezza' => 'Salud y Belleza',
     'sport' => 'Deportes',
+
+    'dettaglio' => 'Detalle del artículo',
+    'titolo' => 'Título',
+    'descrizione' => 'Descripción',
+    'prezzo' => 'Precio',
+
+    'crea' => 'Crear anuncio',
+    'creaQui' => '¡Crea tu anuncio aquí!',
+
+    'titoloForm' => 'Título',
+    'descrizioneForm' => 'Descripción',
+    'prezzoForm' => 'Precio',
+    'categoriaForm' => 'Selecciona una categoría',
+    'selezioneForm' => 'Selecciona una categoría',
+    'creaForm' => 'Crea tu anuncio',
+
+    'dettaglioCard' => 'Detalle',
 ];

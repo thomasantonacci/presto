@@ -12,7 +12,7 @@ return [
     'profiloUtente' => 'User Profile',
     'search' => 'Search',
     'revisore' => 'Revisor section',
-    'titolo' => 'Welcome to',
+    'titoloWelcome' => 'Welcome to',
     'sottotitolo' => 'The site where you can sell and buy everything you can imagine!',
     'noArticoli' => 'No articles have been created yet',
     'ultimi' => 'The latest articles',
@@ -26,4 +26,21 @@ return [
     'motori' => 'Motors',
     'salute e bellezza' => 'Health and Beauty',
     'sport' => 'Sports',
+
+    'dettaglio' => 'Article detail',
+    'titolo' => 'Title',
+    'descrizione' => 'Description',
+    'prezzo' => 'Price',
+
+    'crea' => 'Create Ad',
+    'creaQui' => 'Create your ad here!',
+
+    'titoloForm' => 'Title',
+    'descrizioneForm' => 'Description',
+    'prezzoForm' => 'Price',
+    'categoriaForm' => 'Select a category',
+    'selezioneForm' => 'Select a category',
+    'creaForm' => 'Create your ad',
+
+    'dettaglioCard' => 'Detail',
 ];

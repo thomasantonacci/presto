@@ -4,7 +4,7 @@
 <div class="container-fluid hero-container d-flex justify-content-center flex-column position relative align-items-center">
 
 <div class=""> 
-    <h1 class="myfont2 display-3 text-light">{{__('ui.titolo')}} Presto</h1>
+    <h1 class="myfont2 display-3 text-light">{{__('ui.titoloWelcome')}} Presto</h1>
 </div>
 
     
