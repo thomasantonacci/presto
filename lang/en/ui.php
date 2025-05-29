@@ -53,4 +53,15 @@ return [
 
     'diventaRevisore' => 'Do you want to become a revisor?',
     'clicca' => 'Click HERE!',
+    'torna' => 'Go back',
+
+    'registratiTitle' => 'Register to get all the functions of the site',
+    'accediTitle' => 'Login to access your profile',
+    'nomeUtente' => 'Username',
+    'mailUtente' => 'Email adress',
+    'pswUtente' => 'Password',
+    'pswConfirm' => 'Confirm Password',
+    'registrati' => 'Register',
+    'seiRegistrato' => 'Are you already registered? Click here to login!',
+    'nonRegistrato' => 'Not registered yet? Click here to register!',
 ];

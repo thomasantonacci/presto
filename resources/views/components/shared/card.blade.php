@@ -1,4 +1,4 @@
-<div class="card mx-auto p-2 card-w rounded shadow border-3 text-center mb-3">
+<div class="card mx-auto p-2 card-w rounded shadow text-center mb-3 myborder border-primary">
     <img src="https://picsum.photos/200" class="card-img-top" alt="Immagine dell'articolo {{$article->title}}">
     <div class="card-body">
         <div class="altezzatitolo">

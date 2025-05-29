@@ -53,4 +53,16 @@ return [
 
     'diventaRevisore' => '¿Quieres convertirte en revisor?',
     'clicca' => '¡Haz clic AQUÍ!',
+    'torna' => 'Volver atrás',
+
+
+    'registratiTitle' => 'Regístrate para obtener todas las funciones del sitio',
+    'accediTitle' => 'Inicia sesión para acceder a tu perfil',
+    'nomeUtente' => 'Nombre de usuario',
+    'mailUtente' => 'Dirección de correo electrónico',
+    'pswUtente' => 'Contraseña',
+    'pswConfirm' => 'Confirmar contraseña',
+    'registrati' => 'Registrarse',
+    'seiRegistrato' => '¡Te has registrado correctamente! Ahora puedes iniciar sesión.',
+    'nonRegistrato' => '¿Aún no estás registrado? ¡Haz clic aquí para registrarte!',
 ];

@@ -9,16 +9,16 @@
         </div>
         <div class="row height-custom justify-content-center  py-5">
             <div class="col-12 col-md-6 mb-3 ">
-                <div id="carouselExample" class="carousel slide ">
-                    <div class="carousel-inner">
+                <div id="carouselExample" class="carousel slide myborder rounded border-primary shadow">
+                    <div class="carousel-inner rounded">
                         <div class="carousel-item active ">
-                            <img src="https://picsum.photos/400" class="d-block w-100 rounded border-3 shadow" alt=" ... ">
+                            <img src="https://picsum.photos/400" class="d-block w-100" alt=" ... ">
                         </div>
                         <div class="carousel-item">
-                            <img src="https://picsum.photos/400" class="d-block w-100 rounded border-3 shadow" alt=" ... ">
+                            <img src="https://picsum.photos/400" class="d-block w-100" alt=" ... ">
                         </div>
                         <div class="carousel-item">
-                            <img src="https://picsum.photos/400" class="d-block w-100 rounded border-3 shadow" alt=" ... ">
+                            <img src="https://picsum.photos/400" class="d-block w-100" alt=" ... ">
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
@@ -39,6 +39,9 @@
                     <h4> <span class="myfont2 text-primary fw-bold" >{{__('ui.prezzo')}}:  </span>{{ $article->price }}€ </h4>
                     <h5 class="myfont2 pt-5 text-primary fw-bold">{{__('ui.descrizione')}}: </h5>
                             <p>{{ $article->description }}</p>
+                            <div class="py-5 fs-4">
+                                <a href="{{route('article.index')}}" class="text-decoration-none"><p><i class="fa-solid fa-backward-step p-2"></i>{{__('ui.torna')}}</p></a>
+                            </div>
                 </div>
             </div>
         </div>

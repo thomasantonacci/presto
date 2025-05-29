@@ -60,6 +60,18 @@ return [
     'avviso' => 'Avviso di conferma',
     'procedere' => 'Sei sicuro di voler procedere?',
 
-    'diventaRevisore' => 'Vuoi diventare revisore?',
+    'diventaRevisore' => 'Vuoi diventare revisore di Presto?',
     'clicca' => 'Clicca QUI!',
+    'torna' => 'Torna indietro',
+
+    // REGISTER FORM
+    'registratiTitle' => 'Registrati per ottenere tutte le funzionalità del nostro blog!',
+    'accediTitle' => 'Accedi per ottenere tutte le funzionalità del nostro blog!',
+    'nomeUtente' => 'Nome',
+    'mailUtente' => 'Indirizzo email',
+    'pswUtente' => 'Password',
+    'pswConfirm' => 'Conferma password',
+    'registrati' => 'Registrati',
+    'seiRegistrato' => 'Sei già un nostro utente? Accedi ora clickando qui!',
+    'nonRegistrato' => 'Non sei ancora registrato? Registrati ora clickando qui!',
 ];
