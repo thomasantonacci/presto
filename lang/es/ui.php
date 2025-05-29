@@ -43,4 +43,14 @@ return [
     'creaForm' => 'Crea tu anuncio',
 
     'dettaglioCard' => 'Detalle',
+
+    'rifiuta' => 'Rechazar',
+    'accetta' => 'Aceptar',
+    'annuncio' => 'anuncio',
+    'chiudi' => 'Cerrar',
+    'avviso' => 'Aviso de confirmación',
+    'procedere' => '¿Estás seguro de continuar?',
+
+    'diventaRevisore' => '¿Quieres convertirte en revisor?',
+    'clicca' => '¡Haz clic AQUÍ!',
 ];

@@ -37,7 +37,7 @@
           <a class="nav-link" href="{{route('create.article')}}"><i class="fa-solid p-1 fa-file-circle-plus"></i>{{__('ui.creaAnnuncio')}}</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa-solid p-1 fa-user"></i>{{__('ui.profilo')}}</a>
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa-solid p-1 fa-user"></i>{{auth()->user()->name}}</a>
           <div class="dropdown-menu">
             <a class="dropdown-item text-light" href="#">{{__('ui.profiloUtente')}}</a>
             @if (Auth::user()->is_revisor)
@@ -64,7 +64,7 @@
 
     <form class="d-flex ms-auto" role="search" action="{{route('article.search')}}" method="GET">
       <div class="input-group">
-        <input size="30" type="search" name="query" class="form-control rounded" placeholder="{{__('ui.search')}}" aria-label="search">
+        <input size="30" type="search" name="query" class="form-control rounded mysearch" placeholder="{{__('ui.search')}}" aria-label="search">
         <button type="submit" class="input-group-text btn btn-outline-light rounded shadow ms-2" id="basic-addon2">{{__('ui.search')}}</button>
       </div>
     </form>

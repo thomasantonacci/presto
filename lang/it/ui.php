@@ -52,4 +52,14 @@ return [
     // CARD ANNUNCIO
     'dettaglioCard' => 'Dettaglio',
 
+    // BUTTON REVISORE
+    'rifiuta' => 'Rifiuta',
+    'accetta' => 'Accetta',
+    'annuncio' => 'annuncio',
+    'chiudi' => 'Chiudi',
+    'avviso' => 'Avviso di conferma',
+    'procedere' => 'Sei sicuro di voler procedere?',
+
+    'diventaRevisore' => 'Vuoi diventare revisore?',
+    'clicca' => 'Clicca QUI!',
 ];

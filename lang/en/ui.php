@@ -43,4 +43,14 @@ return [
     'creaForm' => 'Create your ad',
 
     'dettaglioCard' => 'Detail',
+
+    'rifiuta' => 'Reject',
+    'accetta' => 'Accept',
+    'annuncio' => 'ad',
+    'chiudi' => 'Close',
+    'avviso' => 'Confirmation notice',
+    'procedere' => 'Are you sure to continue?',
+
+    'diventaRevisore' => 'Do you want to become a revisor?',
+    'clicca' => 'Click HERE!',
 ];

@@ -37,5 +37,17 @@
     right: 0;
 }
 
+.mysearch, .mysearch:focus{
+    background-color: white;
+    color: black
+}
+
+.mysearch::placeholder  {
+    color: black;
+}
+
+.myloginheight {
+    height: 70.7vh;
+}
 
 

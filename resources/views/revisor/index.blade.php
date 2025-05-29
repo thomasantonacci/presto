@@ -1,10 +1,10 @@
 <x-main-layout>
-    <x-slot:title>Zona Revisore</x-slot:title>
+    <x-slot:title>{{__('ui.revisore')}}</x-slot:title>
     <div class="container-fluid pt-5">
         <div class="row">
             <div class="col-3 mx-auto">
                 <h1 class="display-5 d-flex text-center justify-content-center align-items-center text-primary fw-bold">
-                    Pannello Revisore
+                    {{__('ui.revisore')}}
                 </h1>
             </div>
         </div>
@@ -36,8 +36,8 @@
                 <p class="h6">{{ $article_to_check->description }}</p>
             </div>
             <div class="d-flex pb-4 justify-content-around">
-                <button type="button" class="btn btn-danger py-2 px-5 fw-bold rounded shadow" data-bs-toggle="modal" data-bs-target="#exampleModal">Rifiuta</button>
-                <button type="button" class="btn btn-success py-2 px-5 fw-bold rounded shadow" data-bs-toggle="modal" data-bs-target="#exampleModal">Accetta</button>
+                <button type="button" class="btn btn-danger py-2 px-5 fw-bold rounded shadow" data-bs-toggle="modal" data-bs-target="#exampleModal">{{__('ui.rifiuta')}}</button>
+                <button type="button" class="btn btn-success py-2 px-5 fw-bold rounded shadow" data-bs-toggle="modal" data-bs-target="#exampleModal">{{__('ui.accetta')}}</button>
             </div>
         </div>
     </div>
@@ -57,24 +57,24 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5 text-danger fw-bold" id="exampleModalLabel">Avviso di conferma</h1>
+                    <h1 class="modal-title fs-5 text-danger fw-bold" id="exampleModalLabel">{{__('ui.avviso')}}</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Sei sicuro di voler procedere?</p>
+                    <p>{{__('ui.procedere')}}</p>
                 </div>
                 <div class="modal-footer">
                     <form action="{{route('accept', ['article'=>$article_to_check])}}" method="POST">
                     @csrf
                     @method('PATCH')
-                    <button id="btn-apri" class="btn btn-success py-2 px-5 fw-bold rounded shadow">Accetta annuncio</button>
+                    <button id="btn-apri" class="btn btn-success py-2 px-5 fw-bold rounded shadow">{{__('ui.accetta')}} {{__('ui.annuncio')}}</button>
                     </form>
                     <form action="{{route('reject', ['article'=>$article_to_check])}}" method="POST">
                     @csrf
                     @method('PATCH')
-                    <button class="btn btn-danger py-2 px-5 fw-bold rounded shadow">Rifiuta annuncio</button>
+                    <button class="btn btn-danger py-2 px-5 fw-bold rounded shadow">{{__('ui.rifiuta')}} {{__('ui.annuncio')}}</button>
                     </form>
-                    <button type="button" class="btn btn-secondary rounded shadow" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary rounded shadow" data-bs-dismiss="modal">{{__('ui.chiudi')}}</button>
                 </div>
             </div>
         </div>

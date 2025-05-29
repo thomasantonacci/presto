@@ -2,9 +2,9 @@
     <x-slot:title>{{__('ui.dettaglio')}} {{ $article->title }}</x-slot:title>
 
     <div class="container">
-        <div class="row height-custom justify-content-center align-items-center text-center">
+        <div class="row height-custom justify-content-center align-items-center text-center mt-4">
             <div class="col-12">
-                <h1 class="fw-bold display-4">{{__('ui.dettaglio')}}</h1>
+                <h1 class="text-primary">{{__('ui.dettaglio')}}</h1>
             </div>
         </div>
         <div class="row height-custom justify-content-center  py-5">
@@ -33,11 +33,11 @@
                     </button>
                 </div>
             </div>
-            <div class="col-12 col-md-6 mb-3 height-custom text-center">
-                <h2 class="display-5"> <span class=" text-primary fw-bold">{{__('ui.titolo')}}: </span> {{ $article->title }}</h2>
-                <div class=" d-flex flex-column justify-content-center h-75">
-                    <h4> <span class="text-primary fw-bold" >{{__('ui.prezzo')}}:  </span>{{ $article->price }}€ </h4>
-                    <h5 class=" pt-5 text-primary">{{__('ui.descrizione')}}: </h5>
+            <div class="col-12 col-md-6 height-custom text-center">
+                <h2 class=""><span class="myfont2 text-primary fw-bold">{{__('ui.titolo')}}: </span> {{ $article->title }}</h2>
+                <div class=" d-flex flex-column justify-content-center h-50">
+                    <h4> <span class="myfont2 text-primary fw-bold" >{{__('ui.prezzo')}}:  </span>{{ $article->price }}€ </h4>
+                    <h5 class="myfont2 pt-5 text-primary fw-bold">{{__('ui.descrizione')}}: </h5>
                             <p>{{ $article->description }}</p>
                 </div>
             </div>
