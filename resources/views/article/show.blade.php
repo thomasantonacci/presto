@@ -1,25 +1,24 @@
 <x-main-layout>
-    <x-slot:title>Dettaglio dell'articolo: {{ $article->title }}</x-slot:title>
+    <x-slot:title>{{__('ui.dettaglio')}} {{ $article->title }}</x-slot:title>
 
     <div class="container">
-        <div class="row height-custom justify-content-center align-items-center text-center">
+        <div class="row height-custom justify-content-center align-items-center text-center mt-4">
             <div class="col-12">
-                <h1 class="fw-bold display-4">Dettaglio dell'articolo</h1>
-
+                <h1 class="text-primary">{{__('ui.dettaglio')}}</h1>
             </div>
         </div>
         <div class="row height-custom justify-content-center  py-5">
             <div class="col-12 col-md-6 mb-3 ">
-                <div id="carouselExample" class="carousel slide ">
-                    <div class="carousel-inner">
+                <div id="carouselExample" class="carousel slide myborder rounded border-primary shadow">
+                    <div class="carousel-inner rounded">
                         <div class="carousel-item active ">
-                            <img src="https://picsum.photos/400" class="d-block w-100 rounded border-3 shadow" alt=" ... ">
+                            <img src="https://picsum.photos/400" class="d-block w-100" alt=" ... ">
                         </div>
                         <div class="carousel-item">
-                            <img src="https://picsum.photos/400" class="d-block w-100 rounded border-3 shadow" alt=" ... ">
+                            <img src="https://picsum.photos/400" class="d-block w-100" alt=" ... ">
                         </div>
                         <div class="carousel-item">
-                            <img src="https://picsum.photos/400" class="d-block w-100 rounded border-3 shadow" alt=" ... ">
+                            <img src="https://picsum.photos/400" class="d-block w-100" alt=" ... ">
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
@@ -34,12 +33,15 @@
                     </button>
                 </div>
             </div>
-            <div class="col-12 col-md-6 mb-3 height-custom text-center">
-                <h2 class="display-5"> <span class=" text-primary fw-bold">Titolo: </span> {{ $article->title }}</h2>
-                <div class=" d-flex flex-column justify-content-center h-75">
-                    <h4> <span class="text-primary fw-bold" > Prezzo:  </span>{{ $article->price }}€ </h4>
-                    <h5 class=" pt-5 text-primary">Descrizione : </h5>
+            <div class="col-12 col-md-6 height-custom text-center">
+                <h2 class=""><span class="myfont2 text-primary fw-bold">{{__('ui.titolo')}}: </span> {{ $article->title }}</h2>
+                <div class=" d-flex flex-column justify-content-center h-50">
+                    <h4> <span class="myfont2 text-primary fw-bold" >{{__('ui.prezzo')}}:  </span>{{ $article->price }}€ </h4>
+                    <h5 class="myfont2 pt-5 text-primary fw-bold">{{__('ui.descrizione')}}: </h5>
                             <p>{{ $article->description }}</p>
+                            <div class="py-5 fs-4">
+                                <a href="{{route('article.index')}}" class="text-decoration-none"><p><i class="fa-solid fa-backward-step p-2"></i>{{__('ui.torna')}}</p></a>
+                            </div>
                 </div>
             </div>
         </div>

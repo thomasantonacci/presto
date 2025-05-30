@@ -1,5 +1,5 @@
 <x-main-layout>
-    <x-slot:title>Home</x-slot:title>
+    <x-slot:title>{{__('ui.home')}}</x-slot:title>
     @if (session()->has('errorMessage'))
     <div class="alert alert-danger text-center shadow rounded w-100">{{session('errorMessage')}}</div>
     @endif
@@ -7,7 +7,7 @@
     <div class="alert alert-danger text-center shadow rounded w-100">{{session('message')}}</div>
     @endif
     <x-shared.hero-section />
-    <x-shared.section-title title="Gli ultimi annunci.." subtitle="" />
+    <x-shared.section-title title="{{__('ui.ultimi')}}" subtitle="" />
 
     <div class="container">
         <div class="row height-custom justify-content-center align-items-center py-5">
@@ -17,9 +17,7 @@
             </div>
             @empty
             <div class="col-12">
-                <h3 class="text-center">
-                    Non sono ancora stati creati articoli
-                </h3>
+                <h3 class="text-center">{{__('ui.noArticoli')}}</h3>
             </div>
             @endforelse
         </div>

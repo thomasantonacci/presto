@@ -16,12 +16,7 @@
    
          {{$slot}}
     
-       
     
-    
-         
-    
-   
     <x-shared.footer />
 </body>
 </html>

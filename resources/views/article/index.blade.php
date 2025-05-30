@@ -1,9 +1,9 @@
 <x-main-layout>
-    <x-slot:title>Tutti gli annunci</x-slot:title>
+    <x-slot:title>{{__('ui.allArticles')}}</x-slot:title>
     <div class="container pt-5">
         <div class="row justify-content-center align-items-center text-center">
             <div class="col-12">
-                <h1 class=" text-primary">Tutti gli articoli</h1>
+                <h1 class=" text-primary">{{__('ui.allArticles')}}</h1>
             </div>
         </div>
         <div class="row height-custom justify-content-center align-items-center py-5">
