@@ -74,4 +74,8 @@ return [
     'registrati' => 'Registrati',
     'seiRegistrato' => 'Sei già un nostro utente? Accedi ora clickando qui!',
     'nonRegistrato' => 'Non sei ancora registrato? Registrati ora clickando qui!',
+    'noarticoli' => 'Nessun articolo da revisionare',
+    'tohomepage' => 'Torna alla Home',
+    'categoriaarticoli' => 'Articoli della Categoria'
+    
 ];

@@ -1,6 +1,6 @@
 <x-main-layout>
     <x-slot:title>{{__('ui.revisore')}}</x-slot:title>
-    <div class="container-fluid pt-5">
+    <div class="container-fluid pt-5 myrevisorheight">
         <div class="row">
             <div class="col-3 mx-auto">
                 <h1 class="display-5 d-flex text-center justify-content-center align-items-center text-primary fw-bold">
@@ -70,9 +70,9 @@
     <div class="row justify-content-center align-items-center height-custom text-center">
         <div class="col-12">
             <h1 class="fst-italic display-4">
-                Nessun articolo da revisionare
+                {{__('ui.noarticoli')}}
             </h1>
-            <a href="{{ route('home') }}" class="mt-5 btn btn-success">Torna all'homepage</a>
+            <a href="{{ route('home') }}" class="mt-5 btn btn-primary rounded shadow">{{__('ui.tohomepage')}}</a>
         </div>
     </div>
     @endif

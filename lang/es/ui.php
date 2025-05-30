@@ -65,4 +65,8 @@ return [
     'registrati' => 'Registrarse',
     'seiRegistrato' => '¡Te has registrado correctamente! Ahora puedes iniciar sesión.',
     'nonRegistrato' => '¿Aún no estás registrado? ¡Haz clic aquí para registrarte!',
+    'noarticoli'=>'No hay elementos para revisar',
+    'tohomepage' => 'Regresar a inicio',
+    'categoriaarticoli' => 'Artículos en la Categoria'
+
 ];

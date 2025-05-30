@@ -64,4 +64,7 @@ return [
     'registrati' => 'Register',
     'seiRegistrato' => 'Are you already registered? Click here to login!',
     'nonRegistrato' => 'Not registered yet? Click here to register!',
+    'noarticoli' => 'No Ad to revise',
+    'tohomepage' =>'Back to Homepage',
+    'categoriaarticoli' => 'Articles in the category'
 ];
