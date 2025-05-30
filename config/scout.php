@@ -206,7 +206,7 @@ return [
         ],
     ],
 
-'tntsearch' =>[   
+'tntsearch' => [   
         'storage' => storage_path(),
         'fuzziness' => env('TNTSEARCH_FUZZINESS', true),
         'fuzzy' => [
