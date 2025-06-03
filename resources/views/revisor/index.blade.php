@@ -1,6 +1,6 @@
 <x-main-layout>
     <x-slot:title>{{__('ui.revisore')}}</x-slot:title>
-    <div class="container-fluid pt-5 myrevisorheight">
+    <div class="container pt-5 ">
         <div class="row">
             <div class="col-3 mx-auto">
                 <h1 class="display-5 d-flex text-center justify-content-center align-items-center text-primary fw-bold">
@@ -15,30 +15,36 @@
             </div>
         </div>
         @endif
-        @if ($article_to_check)
-        <div class="row justify-content-center pt-5">
-            <div class="col-md-8">
-                <div class="row justify-content-center">
-                    @for ($i = 0; $i < 6; $i++)
-                        <div class="col-6 col-md-4 mb-4 text-center">
-                        <img src="https://picsum.photos/300" class="img-fluid rounded shadow" alt="immagine segnaposto">
-                </div>
-                @endfor
+        <div class="row justify-content-evenly mt-5 ">
+            @if ($article_to_check)
+            @if ($article_to_check->images->count())
+            @foreach ($article_to_check->images as $key=> $image)
+            <div class="col-6 mb-4">
+                <img src="{{ Storage::url($image->path)}}" class=" myrevisorimage img-fluid rounded shadow" alt="Immagine {{$key+1 }} dell'articolo '{{$article_to_check->title}}">
             </div>
+            @endforeach
+            @else
+            @for ($i = 0; $i < 6; $i++)
+                <div class="col-6 mb-4 text-center">
+                <img src="https://picsum.photos/300" class="img-fluid rounded shadow" alt="immagine segnaposto">
         </div>
-        <div class="col-md-4 ps-4 d-flex flex-column justify-content-between">
-            <div>
-                <h1>{{ $article_to_check->title }}</h1>
-                <h3>Autore: {{ $article_to_check->user->name }} </h3>
-                <h4>{{ $article_to_check->price }}€</h4>
-                <h4 class="fst-italic text-muted">#{{ $article_to_check->category->name }}</h4>
-                <p class="h6">{{ $article_to_check->description }}</p>
-            </div>
-            <div class="d-flex pb-4 justify-content-around">
-                <button type="button" class="btn btn-danger py-2 px-5 fw-bold rounded shadow" data-bs-toggle="modal" data-bs-target="#exampleModal">{{__('ui.rifiuta')}}</button>
-                <button type="button" class="btn btn-success py-2 px-5 fw-bold rounded shadow" data-bs-toggle="modal" data-bs-target="#exampleModal">{{__('ui.accetta')}}</button>
-            </div>
+    </div>
+    @endfor
+    @endif
+
+    <div class="col-6 ps-4 d-flex flex-column align-items-center justify-content-between">
+        <div>
+            <h1>{{ $article_to_check->title }}</h1>
+            <h3>Autore: {{ $article_to_check->user->name }} </h3>
+            <h4>{{ $article_to_check->price }}€</h4>
+            <h4 class="fst-italic text-muted">#{{ $article_to_check->category->name }}</h4>
+            <p class="h6">{{ $article_to_check->description }}</p>
         </div>
+        <div class="pb-4">
+            <button type="button" class="me-5 btn btn-danger py-2 px-5 fw-bold rounded shadow" data-bs-toggle="modal" data-bs-target="#exampleModal">{{__('ui.rifiuta')}}</button>
+            <button type="button" class="ms-5 btn btn-success py-2 px-5 fw-bold rounded shadow" data-bs-toggle="modal" data-bs-target="#exampleModal">{{__('ui.accetta')}}</button>
+        </div>
+    </div>
     </div>
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -77,7 +83,7 @@
     </div>
     @endif
     </div>
-    
+
     <!-- MODALE -->
 
 </x-main-layout>

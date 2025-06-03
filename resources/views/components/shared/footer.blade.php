@@ -1,4 +1,4 @@
-<footer class="bg-body-primary mt-3 w-100 text-center">
+<footer class="bg-body-primary mt-3 w-100 text-center ">
   <div class="d-flex text-center align-items-center justify-content-evenly p-3 bg-primary">
     @auth
     @if (!Auth::user()->is_revisor)
