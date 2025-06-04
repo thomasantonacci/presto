@@ -1,6 +1,6 @@
 <x-main-layout>
     <x-slot:title>{{__('ui.revisore')}}</x-slot:title>
-    <div class="container pt-5 ">
+    <div class="container-fluid align-items-center pt-4  ">
         <div class="row">
             <div class="col-3 mx-auto">
                 <h1 class="display-5 d-flex text-center justify-content-center align-items-center text-primary fw-bold">
@@ -15,24 +15,24 @@
             </div>
         </div>
         @endif
-        <div class="row justify-content-evenly mt-5 ">
+        <div class="row d-flex flex-column justify-content-evenly mt-4 ">
             @if ($article_to_check)
             @if ($article_to_check->images->count())
             @foreach ($article_to_check->images as $key=> $image)
-            <div class="col-6 mb-4">
-                <img src="{{ Storage::url($image->path)}}" class=" myrevisorimage img-fluid rounded shadow" alt="Immagine {{$key+1 }} dell'articolo '{{$article_to_check->title}}">
+            <div class="col-12 ps-4 col-md-4 mb-4 d-flex flex-column align-items-center">
+                <img src="{{ $image->getUrl(300,300) }}" class=" myrevisorimage img-fluid rounded shadow" alt="Immagine {{$key+1 }} dell'articolo '{{$article_to_check->title}}">
             </div>
             @endforeach
             @else
-            @for ($i = 0; $i < 6; $i++)
-                <div class="col-6 mb-4 text-center">
+            @for ($i = 0; $i < 1; $i++)
+                <div class="col-12 mb-4 text-center">
                 <img src="https://picsum.photos/300" class="img-fluid rounded shadow" alt="immagine segnaposto">
         </div>
     </div>
     @endfor
     @endif
 
-    <div class="col-6 ps-4 d-flex flex-column align-items-center justify-content-between">
+    <div class="col-12 ps-4 d-flex flex-column align-items-center justify-content-between">
         <div>
             <h1>{{ $article_to_check->title }}</h1>
             <h3>Autore: {{ $article_to_check->user->name }} </h3>
@@ -41,8 +41,8 @@
             <p class="h6">{{ $article_to_check->description }}</p>
         </div>
         <div class="pb-4">
-            <button type="button" class="me-5 btn btn-danger py-2 px-5 fw-bold rounded shadow" data-bs-toggle="modal" data-bs-target="#exampleModal">{{__('ui.rifiuta')}}</button>
-            <button type="button" class="ms-5 btn btn-success py-2 px-5 fw-bold rounded shadow" data-bs-toggle="modal" data-bs-target="#exampleModal">{{__('ui.accetta')}}</button>
+            <button type="button" class="me-5 mt-3 mb-4 btn btn-danger py-2 px-5 fw-bold rounded shadow" data-bs-toggle="modal" data-bs-target="#exampleModal">{{__('ui.rifiuta')}}</button>
+            <button type="button" class="ms-5 mt-3 mb-4 btn btn-success py-2 px-5 fw-bold rounded shadow" data-bs-toggle="modal" data-bs-target="#exampleModal">{{__('ui.accetta')}}</button>
         </div>
     </div>
     </div>
