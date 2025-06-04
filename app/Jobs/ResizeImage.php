@@ -2,6 +2,7 @@
 
 namespace App\Jobs;
 
+use App\Models\Image;
 use Spatie\Image\Enums\CropPosition;
 use Illuminate\Foundation\Queue\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
