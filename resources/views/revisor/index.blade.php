@@ -15,16 +15,32 @@
             </div>
         </div>
         @endif
-        <div class="row d-flex flex-column justify-content-evenly mt-4 ">
+        <div class="row d-flex align-items-center flex-column justify-content-evenly mt-4 ">
             @if ($article_to_check)
             @if ($article_to_check->images->count())
-            @foreach ($article_to_check->images as $key=> $image)
-            <div class="col-12 ps-4 col-md-4 mb-4 d-flex flex-column align-items-center">
-                <img src="{{ $image->getUrl(300,300) }}" class=" myrevisorimage img-fluid rounded shadow" alt="Immagine {{$key+1 }} dell'articolo '{{$article_to_check->title}}">
-            </div>
-            @endforeach
+            <div id="carouselExample" class="myrevisorimage carousel slide rounded">
+                    <div class="carousel-inner rounded">
+                        @foreach ($article_to_check->images as $key=> $image)
+                        <div class="carousel-item @if ($loop->first) active @endif ">
+                            <img src="{{ $image->getUrl(400,400) }}" class="d-block w-100 rounded shadow" alt=" Immagine {{ $key + 1}} dell'articolo {{ $article_to_check->title }} ">
+                        </div>
+                        @endforeach
+                    </div>
+                    @if ($article_to_check->images->count()>1)
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                    @endif
+                </div>
             @else
-            @for ($i = 0; $i < 1; $i++)
+            @for ($i = 0; $i < 6; $i++)
                 <div class="col-12 mb-4 text-center">
                 <img src="https://picsum.photos/300" class="img-fluid rounded shadow" alt="immagine segnaposto">
         </div>

@@ -15,9 +15,15 @@ class RevisorController extends Controller
     public function index()
     {
         $article_to_check = Article::where('is_accepted', null)->first();
-            return view('revisor.index', compact('article_to_check'));
+        // $format_number_no_rounding = function($number, $decimals = 2) {
+        // $factor = pow(10, $decimals);
+        // $truncated = floor($number * $factor) / $factor;
+        // return number_format($truncated, $decimals, ',', '.');
+        // $formatted_number = $article_to_check->price;
+    
+        return view('revisor.index', compact('article_to_check'));
     }
-
+    
     public function accept(Article $article)
     {
         $article->setAccepted(true);
@@ -38,7 +44,8 @@ class RevisorController extends Controller
     public function makeRevisor(User $user)
     {
         Artisan::call('app:make-user-revisor', [
-            'email' => $user->email]);
-            return redirect()->back();
+            'email' => $user->email
+        ]);
+        return redirect()->back();
     }
 }

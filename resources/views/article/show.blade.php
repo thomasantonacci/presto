@@ -14,15 +14,9 @@
                     <div class="carousel-inner rounded">
                         @foreach ($article->images as $key=> $image)
                         <div class="carousel-item @if ($loop->first) active @endif ">
-                            <img src="{{ $image->getUrl(300,300) }}" class="d-block w-100 rounded shadow" alt=" Immagine {{ $key + 1}} dell'articolo {{ $articl->title }} ">
+                            <img src="{{ $image->getUrl(400,400) }}" class="d-block w-100 rounded shadow" alt=" Immagine {{ $key + 1}} dell'articolo {{ $articl->title }} ">
                         </div>
                         @endforeach
-                        <!-- <div class="carousel-item">
-                            <img src="https://picsum.photos/400" class="d-block w-100" alt=" ... ">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://picsum.photos/400" class="d-block w-100" alt=" ... ">
-                        </div> -->
                     </div>
                     @if ($article->images->count()>1)
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
