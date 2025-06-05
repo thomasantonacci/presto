@@ -1,23 +1,30 @@
-// function openModal() {
-//     document.getElementById('my-modal').style.display = 'block';
-// }
+function crea_intervallo(ElementoHTML, numeromax, tempo) {
+    let counter = 0;
+    let id_interval = setInterval( () => {
+        if (counter < numeromax) {
+            counter ++;
+            ElementoHTML.innerHTML = counter;
 
-// document.getElementById('btn-apri').addEventListener('click', function() {
-//     document.getElementById('my-modal').style.display = 'block';
-// });
+        } else {
+            clearInterval(id_interval);
+        }
+    }, tempo );
 
-// document.getElementById('btn-apri-2').addEventListener('click', function() {
-//     document.getElementById('my-modal').style.display = 'block';
-// });
+}
 
-// function closeModal() {
-//     document.getElementById('my-modal-close').style.display = 'none';
-// }
+let controllo_ripetizione = 'true';
+let osserva = new IntersectionObserver ( entries => {
+ entries.forEach(entrie => {
+    if (entrie.isIntersecting && controllo_ripetizione == 'true' ) {
+        crea_intervallo(number1, 6,0);
+        crea_intervallo(number2, 200, 100);
+        crea_intervallo(number3, 150, 100);
+        controllo_ripetizione = 'false';
+    }
+ });
+}
 
-
-
-// function confirmAction() {
-//     alert('Azione confermata!');
-// }
+);
+osserva.observe(number3);
 
 

@@ -1,9 +1,27 @@
 <nav class="navbar sticky-top navbar-expand-lg bg-primary" data-bs-theme="dark">
   <div class="d-flex justify-content-between container-fluid">
-    <x-_locale lang="it" />
-    <x-_locale lang="en" />
-    <x-_locale lang="es" />
-    <a class="navbar-brand myfont" href="{{route('home')}}">Presto</a>
+    <!-- <li class="nav-item dropdown"> -->
+      <a class="nav-link nav-item dropdown dropdown-toggle text-light me-5" href="#" role="button" data-bs-toggle="dropdown"
+        aria-expanded="false">Lingua</a>
+      <ul class="dropdown-menu">
+
+        <li><a class="dropdown-item text-light">
+            <x-_locale lang="it" />
+          </a>
+          <hr class="dropdown-divider">
+        </li>
+        <li><a class="dropdown-item text-light">
+            <x-_locale lang="en" />
+          </a>
+          <hr class="dropdown-divider">
+        </li>
+        <li><a class="dropdown-item text-light">
+            <x-_locale lang="es" />
+          </a>
+        </li>
+      </ul>
+    </li>
+    <a class="navbar-brand myfont ms-5" href="{{route('home')}}"><img class="img-fluid mylogo m-0 p-0"src="{{ asset('images/Presto_logo.png')}}" alt="Logo">resto</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

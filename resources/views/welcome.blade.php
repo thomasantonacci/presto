@@ -7,8 +7,8 @@
     <div class="alert alert-danger text-center shadow rounded w-100">{{session('message')}}</div>
     @endif
     <x-shared.hero-section />
+    <x-animation />
     <x-shared.section-title title="{{__('ui.ultimi')}}" subtitle="" />
-
     <div class="container">
         <div class="row height-custom justify-content-center align-items-center py-5">
             @forelse ($articles as $article)

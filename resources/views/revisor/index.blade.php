@@ -40,7 +40,7 @@
                     @endif
                 </div>
             @else
-            @for ($i = 0; $i < 6; $i++)
+            @for ($i = 0; $i < 1; $i++)
                 <div class="col-12 mb-4 text-center">
                 <img src="https://picsum.photos/300" class="img-fluid rounded shadow" alt="immagine segnaposto">
         </div>

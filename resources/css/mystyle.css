@@ -73,3 +73,11 @@ body {
     width: 400px;
     border: none;
 }
+.myrowheight {
+    height: 150px;
+    align-items: center;
+}
+.mylogo{
+    height: 30px;
+    width: 30px;
+}

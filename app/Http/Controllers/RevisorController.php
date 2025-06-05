@@ -15,11 +15,9 @@ class RevisorController extends Controller
     public function index()
     {
         $article_to_check = Article::where('is_accepted', null)->first();
-        // $format_number_no_rounding = function($number, $decimals = 2) {
-        // $factor = pow(10, $decimals);
-        // $truncated = floor($number * $factor) / $factor;
-        // return number_format($truncated, $decimals, ',', '.');
-        // $formatted_number = $article_to_check->price;
+       if ($article_to_check) {
+        $article_to_check->price = number_format($article_to_check->price,2,',','.');
+       }
     
         return view('revisor.index', compact('article_to_check'));
     }
