@@ -38,7 +38,7 @@
         </div>
         <div class="mb-3">
             <input type="file" wire:model.live="temporary_images" multiple class="form-control shadow @error ('temporary_images.*') is-invalid @enderror" placeholder="Prova">
-            @error('temporary_images. *')
+            @error('temporary_images.*')
             <p class="fst-italic text-danger">{{ $message }}</p>
             @enderror
             @error('temporary_images')

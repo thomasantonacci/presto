@@ -16,6 +16,11 @@ class CreateArticleForm extends Component
     use WithFileUploads;
    
     public $images = [];
+    #[Validate('image', message: 'Il file deve essere un immagine')]
+    // #[Validate('dimensions:min_height=400,min_width=400', message:'L immagine deve essere alta minimo 400 px')]
+    // #[Validate('dimensions:min_width=400', message:"L'immagine deve essere larga almeno 400px")]
+    #[Validate('max:1024', message: 'Il file deve essere massimo di 1MB')]
+    #[Validate('max:6', message: 'Non è possibile caricare più di 6 foto')]
     public $temporary_images;
     #[Validate('min:5', message: 'Il campo titolo deve contenere almeno 5 caratteri')]
     #[Validate('required', message: 'Il campo titolo è obbligatorio')]
@@ -60,9 +65,9 @@ class CreateArticleForm extends Component
     }
     public function updatedTemporaryImages() {
         if ($this->validate([
-            'temporary_images.*'=> 'image|max:1024',
+            'temporary_images.*'=> 'image|max:1024|dimensions:min_width=400,min_height=400',
             'temporary_images' =>'max:6'
-        ])) {
+        ], ['temporary_images.*.max'=>"L immagine deve essere max 1MB", 'temporary_images.*.dimensions'=>"L'immagine deve essere 400x400 px"])) {
             foreach($this->temporary_images as $image) {
                 $this->images[] = $image;
             }
