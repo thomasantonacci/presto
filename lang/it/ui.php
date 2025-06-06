@@ -13,6 +13,13 @@ return [
     'profiloUtente' => 'Profilo utente',
     'search' => 'Cerca',
     'revisore' => 'Area Revisore',
+    'lingua'=>'Lingua',
+
+    //ANIMATION
+    'nostrinumeri'=>'I nostri numeri',
+    'annunci'=>'Annunci',
+    'articolivenduti'=>'Articoli venduti',
+    'feedback'=>'Feedback positivi',
 
     // HERO SECTION
     'titoloWelcome' => 'Benvenuto su',
@@ -41,6 +48,7 @@ return [
     // CREA ANNUNCIO
     'crea' => 'Crea annuncio',
     'creaQui' => 'Crea il tuo annuncio qui!',
+
     // FORM CREA ANNUNCIO
     'titoloForm' => 'Titolo',
     'descrizioneForm' => 'Descrizione',
@@ -48,6 +56,7 @@ return [
     'categoriaForm' => 'Seleziona una categoria',
     'selezioneForm' => 'Seleziona una categoria',
     'creaForm' => 'Crea il tuo annuncio',
+    'anteprima'=>'Anteprima foto',
 
     // CARD ANNUNCIO
     'dettaglioCard' => 'Dettaglio',

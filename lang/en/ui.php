@@ -26,6 +26,12 @@ return [
     'motori' => 'Motors',
     'salute e bellezza' => 'Health and Beauty',
     'sport' => 'Sports',
+    'lingua'=>'Language',
+
+    'nostrinumeri'=>'Our numbers',
+    'annunci'=>'Ads',
+    'articolivenduti'=>'Sold items',
+    'feedback'=>'Positive feedbacks',
 
     'dettaglio' => 'Article detail',
     'titolo' => 'Title',
@@ -41,6 +47,7 @@ return [
     'categoriaForm' => 'Select a category',
     'selezioneForm' => 'Select a category',
     'creaForm' => 'Create your ad',
+    'anteprima'=>'Photo preview',
 
     'dettaglioCard' => 'Detail',
 

@@ -26,6 +26,13 @@ return [
     'motori' => 'Motores',
     'salute e bellezza' => 'Salud y Belleza',
     'sport' => 'Deportes',
+    'lingua'=>'Idioma',
+
+    'nostrinumeri'=>'Nuestros nùmeros',
+
+    'annunci'=>'Anuncios',
+    'articolivenduti'=>'Articulos vendidos',
+    'feedback'=>'Positivos comentarios',
 
     'dettaglio' => 'Detalle del artículo',
     'titolo' => 'Título',
@@ -41,6 +48,7 @@ return [
     'categoriaForm' => 'Selecciona una categoría',
     'selezioneForm' => 'Selecciona una categoría',
     'creaForm' => 'Crea tu anuncio',
+    'anteprima'=>'Avance foto',
 
     'dettaglioCard' => 'Detalle',
 

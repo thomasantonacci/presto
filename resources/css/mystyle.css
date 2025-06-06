@@ -78,6 +78,16 @@ body {
     align-items: center;
 }
 .mylogo{
-    height: 30px;
-    width: 30px;
+    
+    height: 120px;
+    width: 120px;
+}
+.myfont3{
+    font-size: 2rem;
+    font-family: "Rubik Wet Paint", system-ui;
+    color:rgb(237, 244, 13);
+    margin-left: 80px;
+    
+
+    
 }

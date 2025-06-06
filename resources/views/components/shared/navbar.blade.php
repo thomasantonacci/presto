@@ -2,7 +2,7 @@
   <div class="d-flex justify-content-between container-fluid">
     <!-- <li class="nav-item dropdown"> -->
       <a class="nav-link nav-item dropdown dropdown-toggle text-light me-5" href="#" role="button" data-bs-toggle="dropdown"
-        aria-expanded="false">Lingua</a>
+        aria-expanded="false">{{__('ui.lingua')}}</a>
       <ul class="dropdown-menu">
 
         <li><a class="dropdown-item text-light">
@@ -21,7 +21,7 @@
         </li>
       </ul>
     </li>
-    <a class="navbar-brand myfont ms-5" href="{{route('home')}}"><img class="img-fluid mylogo m-0 p-0"src="{{ asset('images/Presto_logo.png')}}" alt="Logo">resto</a>
+    <a class="navbar-brand myfont3 " href="{{route('home')}}">PRESTO</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
