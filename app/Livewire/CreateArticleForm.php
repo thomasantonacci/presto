@@ -67,7 +67,7 @@ class CreateArticleForm extends Component
         if ($this->validate([
             'temporary_images.*'=> 'image|max:1024|dimensions:min_width=400,min_height=400',
             'temporary_images' =>'max:6'
-        ], ['temporary_images.*.max'=>"L immagine deve essere max 1MB", 'temporary_images.*.dimensions'=>"L'immagine deve essere 400x400 px"])) {
+        ], ['temporary_images.*.max'=>"L immagine deve essere max 1MB", 'temporary_images.*.dimensions'=>"L'immagine deve essere 400x400 px",'temporary_images.max'=>"Non è possibile caricare più di 6 foto"])) {
             foreach($this->temporary_images as $image) {
                 $this->images[] = $image;
             }
