@@ -1,4 +1,4 @@
-<footer class="bg-body-primary mt-3 w-100 text-center @if(!request()->routeIs('article.index') && !request()->routeIs('home') && !request()->routeIs('revisor.index')))  position-fixed bottom-0 w-100 @endif ">
+<footer class="bg-body-primary  m-0 p-0 w-100 text-center @if(!request()->routeIs('article.index') && !request()->routeIs('home') && request()->routeIs('revisor.index')))  position-fixed bottom-0 @endif">
   <div class="d-flex text-center align-items-center justify-content-evenly p-3 bg-primary">
     @auth
     @if (!Auth::user()->is_revisor)
