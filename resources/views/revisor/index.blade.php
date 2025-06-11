@@ -145,7 +145,7 @@
             </div>
         </div>
         @else
-        <div class="row justify-content-center align-items-center height-custom text-center">
+        <div class="row justify-content-center align-items-center  text-center">
             <div class="col-12">
                 <h1 class="fst-italic display-4">
                     {{__('ui.noarticoli')}}
