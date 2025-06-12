@@ -1,5 +1,7 @@
-body {
+body,html {
     background-color: #fcf8f1 !important;
+    padding: 0px;
+    margin: 0px;
 }
 
 .myheight{
@@ -56,6 +58,7 @@ body {
 
 .myborder {
     border: 3px solid black;
+    height: 700px;
 }
 
 .myrevisorheight{
@@ -69,8 +72,8 @@ body {
     width: 120px;
 }
 .myrevisorimage{
-    height: 400px;
-    width: 400px;
+    height: 700px;
+    width: 700px;
     border: none;
 }
 .myrowheight {
@@ -89,5 +92,21 @@ body {
     margin-left: 80px;
     
 
+    
+}
+
+.myimgcard{
+   max-width: 400px; 
+    min-height: 400px;
+}
+
+.card-w{
+   max-width:  400px; 
+}
+
+footer{
+    left: 0;
+    right: 0;
+    min-width: 100% !important;
     
 }

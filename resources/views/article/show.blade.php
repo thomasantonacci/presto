@@ -10,7 +10,7 @@
         <div class="row height-custom justify-content-center  py-5">
             <div class="col-12 col-md-6 mb-3 ">
                 @if ($article->images->count()>0)
-                <div id="carouselExample" class="carousel slide myborder rounded border-primary shadow">
+                <div id="carouselExample" class="carousel slide  rounded border-primary shadow">
                     <div class="carousel-inner rounded">
                         @foreach ($article->images as $key=> $image)
                         <div class="carousel-item @if ($loop->first) active @endif ">
@@ -32,7 +32,7 @@
                     @endif
                 </div>
                 @else
-                <img src="https://picsum.photos/300" alt="Nessuna foto inserita dall'utente">
+                <img class="rounded shadow" src="https://picsum.photos/636" alt="Nessuna foto inserita dall'utente">
                 @endif
             </div>
             <div class="col-12 col-md-6 height-custom text-center">
