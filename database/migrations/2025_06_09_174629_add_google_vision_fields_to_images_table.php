@@ -28,7 +28,7 @@ return new class extends Migration
     {
         Schema::table('images', function (Blueprint $table) {
             $table->dropColumn([
-                'lables',
+                'labels',
                 'adult',
                 'spoof',
                 'medical',
