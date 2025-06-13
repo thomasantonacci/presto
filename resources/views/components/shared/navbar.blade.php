@@ -1,31 +1,34 @@
-<nav class="navbar sticky-top navbar-expand-lg bg-primary" data-bs-theme="dark">
+<nav class="navbar sticky-top navbar-expand-xxl bg-primary" data-bs-theme="dark">
   <div class="d-flex justify-content-between container-fluid">
     <!-- <li class="nav-item dropdown"> -->
-      <a class="nav-link nav-item dropdown dropdown-toggle text-light me-5" href="#" role="button" data-bs-toggle="dropdown"
-        aria-expanded="false">{{__('ui.lingua')}}</a>
-      <ul class="dropdown-menu">
 
-        <li><a class="dropdown-item text-light">
-            <x-_locale lang="it" />
-          </a>
-          <hr class="dropdown-divider">
-        </li>
-        <li><a class="dropdown-item text-light">
-            <x-_locale lang="en" />
-          </a>
-          <hr class="dropdown-divider">
-        </li>
-        <li><a class="dropdown-item text-light">
-            <x-_locale lang="es" />
-          </a>
-        </li>
-      </ul>
-    </li>
     <a class="navbar-brand myfont3 " href="{{route('home')}}">PRESTO</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarColor01">
+      <li class="nav-item dropdown">
+
+        <a class="nav-link dropdown-toggle text-light " href="#" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false">{{__('ui.lingua')}}</a>
+        <ul class="dropdown-menu">
+
+          <li><a class="dropdown-item text-light">
+              <x-_locale lang="it" />
+            </a>
+            <hr class="dropdown-divider">
+          </li>
+          <li><a class="dropdown-item text-light">
+              <x-_locale lang="en" />
+            </a>
+            <hr class="dropdown-divider">
+          </li>
+          <li><a class="dropdown-item text-light">
+              <x-_locale lang="es" />
+            </a>
+          </li>
+        </ul>
+      </li>
       <ul class="navbar-nav mx-auto">
         <li class="nav-item">
           <a class="nav-link active" href="{{route('home')}}"><i class="fa-solid p-1  fa-house"></i>{{__('ui.home')}}<span class="visually-hidden">(current)</span></a>
@@ -62,7 +65,7 @@
             <a class="position-relative btn-sm dropdown-item text-light" href="{{route('revisor.index')}}">{{__('ui.revisore')}}<span class="position-absolute top-0 ms-2 mt-1 traslate-middle badge rounded-pill bg-danger">{{\App\Models\Article::toBeRevisedCount()}}</span></a>
             @endif
             <!-- <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a> -->
+<a class="dropdown-item" href="#">Something else here</a> -->
             <div class="dropdown-divider"></div>
             <form class="nav-link d-flex justify-content-center align-items-center" action="{{route('logout')}}" method="POST">
               @csrf

@@ -124,6 +124,24 @@
         </div>
 
         @endfor
+        <div class="col-4 ps-4 d-flex flex-column align-items-center justify-content-between">
+                            <div>
+                                <h1>{{ $article_to_check->title }}</h1>
+                                <h3>Autore: {{ $article_to_check->user->name }} </h3>
+                                <h4>{{ $article_to_check->price }}€</h4>
+                                <h4 class="fst-italic text-muted">#{{ $article_to_check->category->name }}</h4>
+                                <p class="h6">{{ $article_to_check->description }}</p>
+                            </div>
+                            <div class="pb-4">
+                                <button type="button" class=" mt-3 mb-4 btn btn-danger py-2 px-5 fw-bold rounded shadow" data-bs-toggle="modal" data-bs-target="#exampleModal">{{__('ui.rifiuta')}}</button>
+                                <button type="button" class=" mt-3 mb-4 btn btn-success py-2 px-5 fw-bold rounded shadow" data-bs-toggle="modal" data-bs-target="#exampleModal">{{__('ui.accetta')}}</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
         @endif
 
 
