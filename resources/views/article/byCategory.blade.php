@@ -19,10 +19,10 @@
             <div class="col-12 text-center">
                 <h3>
 
-                    Non sono ancora stati creati articoli per questa categoria!
+                    {{__('ui.noArticoli')}}
                 </h3>
                 @auth
-                <a class="btn btn-dark my-5" href="{{route('create.article')}}">Pubblica un articolo</a>
+                <a class="btn btn-dark rounded shadow my-5" href="{{route('create.article')}}">{{__('ui.creaQui')}}</a>
                 @endauth
             </div>
             @endforelse
